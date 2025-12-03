@@ -89,9 +89,6 @@ body {
     text-shadow: 0 0 10px #00000042;
 }
 
-.contenido {
-}
-
 #logoPag {
     display: block;
     margin-left: auto;
@@ -120,4 +117,82 @@ h1 {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 5px 5px #0000000e;
+}
+
+/* --------------------------------------------- */
+/* 🔥🔻 Responsive (móviles) 🔻🔥 */
+/* --------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .barraNav {
+        width: 160px;
+        transform: translateX(-200px);
+    }
+
+    .boton-Barra {
+        top: 10px;
+        left: 15px;
+        font-size: 22px;
+        padding: 8px 12px;
+    }
+
+    .barraAlta {
+        height: 55px;
+    }
+
+    .barraAlta h1 {
+        font-size: 28px;
+    }
+
+    #logoPag {
+        top: 100px;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    h1 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    #quienesSomos {
+        padding: 15px;
+        margin: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .barraNav {
+        width: 140px;
+        transform: translateX(-180px);
+    }
+
+    .barraNav a {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .boton-Barra {
+        font-size: 20px;
+        padding: 7px 10px;
+    }
+
+    .barraAlta h1 {
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    #quienesSomos {
+        font-size: 14px;
+    }
 }

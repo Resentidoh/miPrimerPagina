@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>ResensKeys</title>
+    <link rel="stylesheet" href="styles/wooting80he.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button id="botonBarra" class="boton-Barra">☰</button>
+    <div class="barraNav" id="barraNav">
+        <h2>NAVEGAR</h2>
+        <a href="../index.html" class="nav-link">Inicio</a>
+        <a href="../products.html" class="nav-link">Productos</a>
+        <a href="#" class="nav-link">Contactos</a>
+        <a href="#" class="nav-link">Sobre Nosotros</a>
+    </div>
+    <div class="barraAlta">
+        <h1>RasenKeys</h1 >
+    </div>
+    <button class="regresar" onclick="volver()"><</button>
+    
+    <div class="contenido">
+        <div class="productoInf">
+            <div class="imagen">
+                <img src="../images/telcaodUno.png" alt="">
+            </div>
+
+            <div class="info">
+                <h2 class="nombreTeclado">Wooting 80HE</h2>
+                <p class="infoTeclado">Teclado perfecto para noches de escritura profunda, con un sonido envolvente que no hará más que hacerte querer escribir más y ser 1000% más eficiente y productivo.</p>
+                <p class="stock">Existencia: 40</p>
+                <p class="precioTeclado">$3,500.00 MXM</p>
+
+                <div class="botones">
+                    <button class="botonComprarA">COMPRAR AHORA</button>
+                    <button class="botonAddC">AÑADIR AL CARRITO</button>
+                </div>
+            </div>
+        </div>
+        <div class="productoCaract">
+            <div class="texto">
+                <p id="textoCaract">Caracteristicas</p>
+                <table class="tablaCaracteristicas">
+                    <tr>
+                        <th>Modelo</th>
+                        <td>RasenKeys</td>
+                    </tr>
+                    <tr>
+                        <th>Material</th>
+                        <td>PRC</td>
+                    </tr>
+                    <tr>
+                        <th>Color</th>
+                        <td>Negro</td>
+                    </tr>
+                    <tr>
+                        <th>Tasa de Sondeo</th>
+                        <td>8000hz</td>
+                    </tr>
+                    <tr>
+                        <th>LED</th>
+                        <td>Si</td>
+                    </tr>
+
+                </table>
+            </div>
+            <video autoplay loop muted style="pointer-events: none; width: 300px;">
+                <source src="../videos/80HE Analog Range.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="productosRecomendados">
+            <p class="recom">RECOMENDADOS</p>
+            <div class="recomendacionUno">
+                <a href="../products.html">
+                    <div>
+                        <img src="../images/tecladoDos.png" alt="">
+                        <p>Wooting 60</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/index.js"></script>
+</body>
+</html>

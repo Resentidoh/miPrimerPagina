@@ -1,0 +1,399 @@
+body {
+    margin: 0;
+    background: #f7f8ff;
+    display: flex;
+}
+
+.boton-Barra {
+    position: fixed;
+    top: 5px;
+    left: 63px;
+    background-color: rgb(204, 236, 250);
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 25px;
+    padding: 10px 15px;
+    box-shadow: 0 0 10px #00000034;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.boton-Barra:active {
+    transform: scale(0.90);
+    transition: transform 0.1s;
+}
+
+.barraNav {
+    position: fixed;
+    left: 0;
+    background: #a3d6f1;
+    background: linear-gradient(90deg, #c4e6e6 0%, hsl(227, 67%, 88%) 100%);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 185px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: 0 0 15px #b8b8b8;
+    z-index: 999;
+    overflow: hidden;
+
+    transform: translateX(-260px);
+    transition: transform 0.4s ease;
+}
+
+.barraNav.open {
+    transform: translateX(0);
+}
+
+.barraNav h2 {
+    margin-top: 60px;
+    text-align: center;
+    text-shadow: 0 0 10px #00000052;
+    color: #0042f756;
+    font-weight: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #ffffff67;
+}
+
+.barraNav a{
+    display: block;
+    padding: 15px 20px;
+    font-size: 18px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.barraNav a:hover {
+    background-color: #b5bfeb;
+    transform: translate(20px, 0);
+}
+
+.barraAlta {
+    position: fixed;
+    background: #fff;
+    background: linear-gradient(0deg, #e0ecf1 0%, #bbd4ee 100%);
+    box-shadow: 0 0 10px #00000021;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barraAlta h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #00000042;
+}
+
+#logoPag {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #6f71df;
+    font-size: 75px;
+    padding: 20px;
+    margin: 0;
+}
+
+.regresar {
+    z-index: 1000;
+    margin: 7px;
+    margin-left: 15px;
+    width: 30px;
+    height: 50px;
+    border: none;
+    background: #ccecfa;
+    box-shadow: 0 0 5px #0000003a;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    position: fixed;
+}
+
+.regresar:active {
+    transform: scale(0.90);
+    transition: transform 0.1s;
+}
+
+.barrabaja {
+    flex-shrink: 0; /* evita que el footer se encoja */
+    /* estilos visuales que ya tenías */
+    background: linear-gradient(90deg, #c4e6e6 0%, hsl(227, 67%, 88%) 100%);
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 -3px 10px #00000020;
+    font-family: sans-serif;
+    color: #404040;
+}
+
+.contenido {
+    justify-content: center;
+    margin: auto;
+    margin-top: 7%;
+}
+
+.productoInf {
+    display: flex;
+    box-shadow: 0 0 15px #00000013;
+    background: #eff6ff;
+    width: 1250px;
+    height: 500px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.imagen {
+    margin: 0;
+    border-radius: 30px;
+    background: #00000021;
+    width: 600px;
+    height: 92%;
+    margin: 20px;
+}
+
+img {
+    margin: 20px;
+    margin-top: 110px;
+    width: 92%;
+    height: auto;
+}
+
+.nombreTeclado {
+    color: #000000;
+    font-size: 40px;
+}
+
+.info {
+    box-shadow: 0 0 15px #00000018;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: auto;
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 90%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+p {
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.precioTeclado {
+    color: #958ef7;
+    text-shadow: 0 0 5px #0000004f;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.stock {
+    font-size: 20px;
+    border-bottom: 2px solid #000;
+    
+}
+
+.botones {
+    margin-top: 20px;
+}
+
+.botonComprarA, .botonAddC {
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 10px #00000057;
+    cursor: pointer;
+}
+
+.botonComprarA {
+    margin-right: 20px;
+    background: #ffffff;
+    background: linear-gradient(90deg, #8400ff 0%, #e06767 100%);
+}
+
+.botonAddC {
+    background: #ffffff;
+    background: linear-gradient(90deg, #c990ff 0%, #e6b2b2 100%);
+}
+
+.productoCaract {
+    margin-top: 30px;
+    display: block;
+    box-shadow: 0 0 15px #00000013;
+    background: #ffffff;
+    width: 1250px;
+    height: auto;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.texto {
+    padding: 10px;
+    padding-bottom: 35px;
+}
+
+#textoCaract {
+    margin-left: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+}
+
+table {
+    margin: auto;
+    margin-right: 100px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #00000050;
+    box-shadow: 0 0 10px #0000002d;
+}
+
+th {
+    background: #13006933;
+    box-shadow: 0 0 10px #1301633a;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+td {
+    text-align: center;
+    background: #30000046;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.productosRecomendados {
+    background: #f1f3ff;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #00000034;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.recom {
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.enlaceRecom {
+    text-decoration: none;
+    color: inherit;
+    display: block;       /* Hace que ocupe todo el ancho */
+}
+
+.recomendacionUno {
+    margin: auto;
+    background: #cfcfcf;
+    width: 250px;
+    height: 220px;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.recomendacionUno:hover {
+    box-shadow: 0 0 15px #00000031;
+    transform: scale(1.05,1.05);
+}
+
+.recomendacionUno img {
+    margin: auto;
+    width: 250px;
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .barraNav {
+        width: 160px;
+        transform: translateX(-200px);
+    }
+
+    .boton-Barra {
+        top: 10px;
+        left: 15px;
+        font-size: 22px;
+        padding: 8px 12px;
+    }
+
+    .barraAlta {
+        height: 55px;
+    }
+
+    .barraAlta h1 {
+        font-size: 28px;
+    }
+
+    #logoPag {
+        top: 100px;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    h1 {
+        font-size: 45px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .barraNav {
+        width: 140px;
+        transform: translateX(-180px);
+    }
+
+    .barraNav a {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .boton-Barra {
+        font-size: 20px;
+        padding: 7px 10px;
+    }
+
+    .barraAlta h1 {
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+}

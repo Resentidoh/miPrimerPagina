@@ -1,20 +1,19 @@
 body {
     margin: 0;
-    background: #f6f0f8;
-    display: grid;
-    height: 100vh;
-    place-items: center;
+    background: #f7f8ff;
+    display: flex;
 }
 
 .boton-Barra {
     position: fixed;
-    top: 560px;
-    left: 20px;
-    background-color: #e5d9f3;
+    top: 5px;
+    left: 63px;
+    background-color: hsl(198, 81%, 89%);
     color: rgb(0, 0, 0);
     border: none;
     font-size: 25px;
     padding: 10px 15px;
+    box-shadow: 0 0 10px #00000034;
     cursor: pointer;
     border-radius: 5px;
     z-index: 1000;
@@ -27,10 +26,9 @@ body {
 
 .barraNav {
     position: fixed;
-    top: 0;
     left: 0;
-    background: #f3ebfc;
-    background: linear-gradient(90deg, #f8f3fa 0%, hsl(271, 57%, 93%) 100%);
+    background: #a3d6f1;
+    background: linear-gradient(90deg, #c4e6e6 0%, hsl(227, 67%, 88%) 100%);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 185px;
     height: 100%;
@@ -38,10 +36,10 @@ body {
     flex-direction: column;
     padding-top: 20px;
     box-shadow: 0 0 15px #b8b8b8;
+    z-index: 999;
 
     transform: translateX(-260px);
     transition: transform 0.4s ease;
-    z-index: 999;
 }
 
 .barraNav.open {
@@ -49,9 +47,13 @@ body {
 }
 
 .barraNav h2 {
+    margin-top: 60px;
     text-align: center;
-    color: #979df3;
+    text-shadow: 0 0 10px #00000052;
+    color: #0042f756;
     font-weight: 5px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #ffffff67;
 }
 
 .barraNav a{
@@ -63,15 +65,14 @@ body {
 }
 
 .barraNav a:hover {
-    background-color: #ead1fc;
-    padding-left: 30px;
+    background-color: #b5bfeb;
 }
 
 .barraAlta {
     position: fixed;
     background: #fff;
-    background: linear-gradient(0deg, #e8e0f1 0%, #f3f3fd 100%);
-    box-shadow: 0 0 10px #00000042;
+    background: linear-gradient(0deg, #e0ecf1 0%, #bbd4ee 100%);
+    box-shadow: 0 0 10px #00000021;
     top: 0;
     left: 0;
     width: 100%;
@@ -84,13 +85,14 @@ body {
 .barraAlta h4 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
-    color: #a793f0;
+    color: #ffffff;
     text-shadow: 0 0 10px #00000042;
 }
 
 .contenido {
     margin-top: 35px;
     padding: 30px;
+    margin-left: 20px;
 }
 
 .imgContent {
@@ -104,11 +106,12 @@ body {
 }
 
 .productos {
-    display: flex; /* Habilita Flexbox */
-    gap: 20px; /* Espacio entre los divs */
+    display: flex;
+    gap: 20px;
 }
 
 .compraUno, .compraDos, .compraTres {
+    box-shadow: 0 0 15px #00000007;
     background: #fff;
     width: 400px;
     height: 450px;
@@ -158,4 +161,101 @@ h3,p {
 .botonCompra:active {
     transform: scale(0.9);
     transition: transform 0.1s;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .barraNav {
+        width: 160px;
+        transform: translateX(-200px);
+    }
+
+    .boton-Barra {
+        top: 10px;
+        left: 15px;
+        font-size: 22px;
+        padding: 8px 12px;
+    }
+
+    .barraAlta {
+        height: 55px;
+    }
+
+    .barraAlta h4 {
+        font-size: 28px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    #logoPag {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    h4 {
+        font-size: 45px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .barraNav {
+        width: 140px;
+        transform: translateX(-180px);
+    }
+
+    .barraNav a {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .boton-Barra {
+        font-size: 20px;
+        padding: 7px 10px;
+    }
+
+    .barraAlta h4 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .compraUno, .compraDos, .compraTres {
+        width: 90%;     
+        max-width: 350px; 
+        height: auto;   
+        padding-bottom: 20px;
+    }
+
+    .compraUno img,
+    .compraDos img,
+    .compraTres img {
+        width: 60%;
+        margin-top: 25px;
+    }
+
+    .botonCompra {
+        margin-left: 0;
+        display: block;
+        margin: 10px auto; /* Centra el botón en móvil */
+    }
 }
