@@ -202,11 +202,11 @@ h1 {
     width: 400px;
     height: 450px;
     border-radius: 20px;
+    text-align: center;
 }
 
 .tarjetaCompra button {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-left: 145px;
     cursor: pointer;
     border: none;
     color: #ede7f7;
@@ -307,7 +307,7 @@ h4 {
     font-size: 30px;
 }
 
-#botonProductos:hover {
+#Productos:hover {
     background: #cccccc;
     box-shadow: 0 0 15px #00000036;
 }
