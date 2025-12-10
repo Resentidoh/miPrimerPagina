@@ -34,7 +34,6 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 function agregarAlCarrito(nombre, precio, img) {
     carrito.push({ nombre, precio, img});
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    alert("Producto agregado al carrito");
 }
 
 if (window.location.pathname.includes("carrito.html")) {
@@ -56,6 +55,7 @@ function mostrarCarrito() {
         div.classList.add("item-carrito");
 
         div.innerHTML = `
+            <div class="caja-producto">
             <img src="${item.img}" width="60">
             <h3>${item.nombre}</h3>
             <p>$${item.precio}</p>
@@ -70,3 +70,48 @@ function eliminarProducto(index) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     location.reload();
 }
+
+function animarBoton(btn) {
+    btn.classList.remove("tornado");
+    void btn.offsetWidth;
+
+    btn.classList.add("tornado");
+
+    setTimeout(() => btn.classList.add("to-red"), 200);
+    setTimeout(() => btn.classList.add("to-green"), 200);
+
+    setTimeout(() => btn.classList.add("hide-text"), 150);
+
+    setTimeout(() => btn.classList.add("show-check"), 400);
+
+    setTimeout(() => {
+        btn.classList.remove("to-red");
+        btn.classList.remove("to-green");
+        btn.classList.remove("hide-text");
+        btn.classList.remove("show-check");
+    }, 1800);
+}
+
+const botones = document.querySelectorAll("#botonComprarA, #botonAddC");
+
+botones.forEach(btn => {
+    btn.addEventListener("click", () => animarBoton(btn));
+});
+
+const modal = document.getElementById("modalContacto");
+const btn = document.getElementById("btnContacto");
+const cerrar = document.getElementById("cerrarModal");
+
+btn.onclick = () => {
+    modal.style.display = "flex";
+};
+
+cerrar.onclick = () => {
+    modal.style.display = "none";
+};
+
+window.onclick = (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+};

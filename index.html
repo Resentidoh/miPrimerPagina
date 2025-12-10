@@ -3,6 +3,7 @@
 <head>
     <title>ResensKeys</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logoIcon.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -12,7 +13,7 @@
         <h2>NAVEGAR</h2>
         <a href="index.html" class="nav-link">Inicio</a>
         <a href="products.html" class="nav-link">Productos</a>
-        <a href="#" class="nav-link">Contactos</a>
+        <button id="btnContacto" class="nav-link">Contactos</button>
     </div>
     <div class="barraAlta">
         <img src="images/logoSolo.png">
@@ -29,8 +30,16 @@
     <div class="contenido">
         <img src="images/logoPag.png" alt="RasensKeys Logo" id="logoPag">
         <p id="quienesSomos">Este proyecto presenta una tienda dedicada a la venta de teclados de alta gama enfocados en el gaming. Su objetivo es ofrecer productos con un alto rendimiento, durabilidad y personalización para mejorar la experiencia de juego de los usuarios. Como estudiante de bachillerato del CETis 16, desarrollo esta propuesta con la intención de aplicar conocimientos de programación, diseño web y administración, creando una plataforma funcional, atractiva y orientada a las necesidades de los jugadores actuales. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita error, velit adipisci eos itaque unde amet aliquid qui illum facere ducimus beatae consequatur ipsa quis repellendus doloremque provident natus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quo! Amet culpa exercitationem architecto ab illum, expedita nam repellat beatae itaque, soluta, error eaque! Molestiae, illo deleniti. Quaerat, veritatis aliquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam natus adipisci voluptates, temporibus quo, odio fugiat earum magni atque corporis odit veniam culpa magnam cupiditate obcaecati sit. Explicabo, vero id!</p>
+        <button id="botonTransicion" onclick="">PRODUCTOS</button>
+        <div id="modalContacto" class="modal">
+            <div class="modal-content">
+                <span id="cerrarModal" class="cerrar">&times;</span>
+                <h2>Contacto</h2>
+                <p>Email: resentidoh@gmail.com</p>
+                <p>WhatsApp: 52 1234 5678</p>
+            </div>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
-
 </html>

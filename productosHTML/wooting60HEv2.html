@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>ResensKeys</title>
+    <title>Wooting 60HE V2</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../images/logoIcon.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -12,7 +13,7 @@
         <h2>NAVEGAR</h2>
         <a href="../index.html" class="nav-link">Inicio</a>
         <a href="../products.html" class="nav-link">Productos</a>
-        <a href="#" class="nav-link">Contactos</a>
+        <button id="btnContacto" class="nav-link">Contactos</button>
     </div>
     <div class="barraAlta">
         <img src="../images/logoSolo.png">
@@ -41,10 +42,17 @@
                 <p class="precioTeclado">$2,500.00 MXM</p>
 
                 <div class="botones">
-                    <button class="botonComprarA">COMPRAR AHORA</button>
-                    <button class="botonAddC" onclick="agregarAlCarrito('Wooting 60HE V2', 2500, '../images/tecladoDos.png')">AÑADIR AL CARRITO</button>
+                    <button id="botonComprarA" class="btn">
+                        <span class="text">COMPRAR AHORA</span>
+                        <span class="check">X</span>
+                    </button>
+                    <button id="botonAddC" class="btn" onclick="agregarAlCarrito('Wooting 60HE V2', 2500, '../images/tecladoDos.png')">
+                        <span class="text">AÑADIR AL CARRITO</span>
+                        <span class="check">✔</span>
+                    </button>
                 </div>
             </div>
+            
         </div>
         <div class="productoCaract">
             <div class="texto">
@@ -102,6 +110,14 @@
                         </div>
                     </a>
                 </div>
+            </div>
+        </div>
+        <div id="modalContacto" class="modal">
+            <div class="modal-content">
+                <span id="cerrarModal" class="cerrar">&times;</span>
+                <h2>Contacto</h2>
+                <p>Email: resentidoh@gmail.com</p>
+                <p>WhatsApp: 52 1234 5678</p>
             </div>
         </div>
     </div>

@@ -58,7 +58,7 @@ body {
     border-bottom: 5px solid #ffffff67;
 }
 
-.barraNav a{
+.barraNav a, #btnContacto{
     display: block;
     padding: 15px 20px;
     font-size: 18px;
@@ -69,6 +69,56 @@ body {
 .barraNav a:hover {
     background-color: #b5bfeb;
     transform: translate(20px, 0);
+}
+
+#btnContacto {
+    background: transparent;
+    color: #4121f3;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+}
+
+#btnContacto:hover {
+    background-color: #b5bfeb;
+}
+
+.modal {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    text-align: cen;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    animation: aparecer 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.cerrar {
+    float: right;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.8); }
+    to   { opacity: 1; transform: scale(1); }
 }
 
 .barraAlta {
@@ -218,7 +268,7 @@ p {
     margin-top: 20px;
 }
 
-.botonComprarA, .botonAddC {
+#botonComprarA, #botonAddC {
     border: none;
     padding: 15px;
     border-radius: 10px;
@@ -228,23 +278,96 @@ p {
     cursor: pointer;
 }
 
-.botonComprarA {
+#botonComprarA {
     margin-right: 20px;
     background: linear-gradient(90deg, #8400ff, #e06767, #033dff, #033dff);
     background-size: 300% 300%;
     transition: background-position 0.5s ease, transform 0.4s;
 }
 
-.botonAddC {
+#botonAddC {
     background: linear-gradient(90deg, #c990ff, #e6b2b2, #15efff, #15efff);
     background-size: 300% 300%;
     transition: background-position 0.5s ease, transform 0.4s;
 }
 
-.botonComprarA:hover, .botonAddC:hover{
+#botonComprarA:hover, #botonAddC:hover{
     background-position: 100% 0;
     transform: scale(1.15);
 }
+
+#botonComprarA, #botonAddC {
+    position: relative;
+    overflow: hidden;
+}
+
+#botonComprarA .text,
+#botonAddC .text {
+    display: inline-block;
+    transition: opacity 0.5s ease;
+}
+
+#botonComprarA .check,
+#botonAddC .check {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#botonComprarA::after,
+#botonAddC::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(from 0deg, #ffffff88, #ffffff00);
+    transform: scale(0) rotate(0deg);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#botonComprarA.tornado::after,
+#botonAddC.tornado::after {
+    animation: tornado 0.8s forwards ease-out;
+}
+
+@keyframes tornado {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(2.5) rotate(540deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+#botonAddC.to-red{
+    background: #00ff0d !important;
+}
+#botonComprarA.to-red {
+    background: red !important;
+}
+
+#botonComprarA.hide-text .text,
+#botonAddC.hide-text .text {
+    opacity: 0;
+}
+
+#botonComprarA.show-check .check,
+#botonAddC.show-check .check {
+    opacity: 1;
+}
+
 
 .productoCaract {
     margin-top: 30px;

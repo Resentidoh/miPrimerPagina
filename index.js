@@ -21,10 +21,28 @@ function volver() {
     if (document.referrer) {
         window.location.href = document.referrer;
     } else {
-        window.location.href = "products.html"; // fallback
+        window.location.href = "products.html";
     }
 }
 
 botonBarra.addEventListener("click", () => {
     barraNav.classList.toggle("open");
 });
+
+const modal = document.getElementById("modalContacto");
+const btn = document.getElementById("btnContacto");
+const cerrar = document.getElementById("cerrarModal");
+
+btn.onclick = () => {
+    modal.style.display = "flex";
+};
+
+cerrar.onclick = () => {
+    modal.style.display = "none";
+};
+
+window.onclick = (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+};
