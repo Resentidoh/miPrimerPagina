@@ -189,6 +189,8 @@ h1 {
     padding: 50px;
 }
 
+
+
 .productos {
     display: flex;
     gap: 20px;
@@ -290,19 +292,33 @@ h4 {
     margin-top: 10px;
 }
 
-#botonTransicion {
+#botonProductos {
     border: 0;
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
     margin-top: 20px;
     background: #f7f8ff;
+    padding: 25px;
+    padding-left: 530px;
+    padding-right: 530px;
+    border-radius: 5px;
+    color: #b05bff;
+    font-size: 30px;
 }
 
-#botonTransicion:hover {
+#botonProductos:hover {
     background: #cccccc;
+    box-shadow: 0 0 15px #00000036;
 }
 
+.contenidoInd {
+    justify-content: center;
+    margin: auto;
+    margin-top: 35px;
+    padding: 50px;
+    text-align: center;
+}
 
 @media (max-width: 768px) {
 
