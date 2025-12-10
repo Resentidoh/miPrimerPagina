@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <title>Document</title>
-    <link rel="stylesheet" href="styles/stylesProducts.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <button id="botonBarra" class="boton-Barra">☰</button>
@@ -12,43 +13,51 @@
         <a href="index.html" class="nav-link">Inicio</a>
         <a href="products.html" class="nav-link">Productos</a>
         <a href="#" class="nav-link">Contactos</a>
-        <a href="#" class="nav-link">Sobre Nosotros</a>
     </div>
     <div class="barraAlta">
-        <h4>RasenKeys</h4>
+        <img src="images/logoSolo.png">
+        <button class="botonCarrito" onclick="location.href='../carrito.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" role="img" aria-label="Carrito de compras">
+                <title>Carrito de compras</title>
+                <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+                        d="M6 6h15l-1.5 9h-11z"/>
+                <circle cx="10" cy="19" r="1.4" fill="currentColor"/>
+                <circle cx="18" cy="19" r="1.4" fill="currentColor"/>
+            </svg>
+        </button>
     </div>
     <div class="contenido">
         <h1>COMPRAS</h1>
         <div class="productos">
-            <div class="compraUno">
+            <div class="tarjetaCompra">
                 <div class="imgContent">
                     <img src="images/telcaodUno.png" alt="Teclado Uno">
                 </div>
                 <h3 class="nombreProducto">Wooting 80HE</h3>
                 <p class="descripcionProd">¡El teclado con menos input delay del mundo!</p>
                 <p class="precio">$3,500.00 MXM</p>
-                <button type="button" class="botonCompra" onclick="location.href='productosHTML/wooting80he.html'">Comprar</button>
+                <button type="button" class="botonCompra" onclick="location.href='productosHTML/wooting80he.html'">Ver</button>
             </div>
-            <div class="compraDos">
+            <div class="tarjetaCompra">
                 <div class="imgContent">
                     <img src="images/tecladoDos.png" alt="Teclado Dos">
                 </div>
-                <h3 class="nombreProducto">Wooting 60HE</h3>
+                <h3 class="nombreProducto">Wooting 60HE V2</h3>
                 <p class="descripcionProd">Teclado perfecto para noches de escritura</p>
-                <p class="precio">$3,500.00 MXM</p>
-                <button type="button" class="botonCompra">Comprar</button>
+                <p class="precio">$2,500.00 MXM</p>
+                <button type="button" class="botonCompra" onclick="location.href='productosHTML/wooting60HEv2.html'">Ver</button>
             </div>
-            <div class="compraTres">
+            <div class="tarjetaCompra">
                 <div class="imgContent">
-                    <img src="images/tecladoDos.png" alt="Teclado Dos">
+                    <img src="images/tecladoTres.png" alt="Teclado Dos">
                 </div>
-                <h3 class="nombreProducto">Wooting 60HE</h3>
+                <h3 class="nombreProducto">Wooting Two HE</h3>
                 <p class="descripcionProd">Teclado perfecto para noches de escritura</p>
-                <p class="precio">$3,500.00 MXM</p>
-                <button type="button" class="botonCompra">Comprar</button>
+                <p class="precio">$2,500.00 MXM</p>
+                <button type="button" class="botonCompra" onclick="location.href='productosHTML/wootingTwoHE.html'">Ver</button>
             </div>
         </div>
     </div>
-    <script src="javascript/products.js"></script> 
+    <script src="index.js"></script> 
 </body>
 </html>

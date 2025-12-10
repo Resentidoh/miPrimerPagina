@@ -1,0 +1,338 @@
+body {
+    margin: 0;
+    background: #f7f8ff;
+    display: flex;
+}
+
+.boton-Barra {
+    position: fixed;
+    top: 5px;
+    left: 63px;
+    background-color: hsl(198, 81%, 89%);
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 25px;
+    padding: 10px 15px;
+    box-shadow: 0 0 10px #00000034;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.boton-Barra:active {
+    transform: scale(0.90);
+    transition: transform 0.1s;
+}
+
+.barraNav {
+    position: fixed;
+    left: 0;
+    background: #a3d6f1;
+    background: linear-gradient(90deg, #c4e6e6 0%, hsl(227, 67%, 88%) 100%);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 185px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: 0 0 15px #b8b8b8;
+    z-index: 999;
+
+    transform: translateX(-260px);
+    transition: transform 0.4s ease;
+}
+
+.barraNav.open {
+    transform: translateX(0);
+}
+
+.barraNav h2 {
+    margin-top: 60px;
+    text-align: center;
+    text-shadow: 0 0 10px #00000052;
+    color: #0042f756;
+    font-weight: 5px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #ffffff67;
+}
+
+.barraNav a{
+    display: block;
+    padding: 15px 20px;
+    font-size: 18px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.barraNav a:hover {
+    background-color: #b5bfeb;
+}
+
+.barraAlta {
+    position: fixed;
+    background: #fff;
+    background: linear-gradient(0deg, #e0ecf1 0%, #bbd4ee 100%);
+    box-shadow: 0 0 10px #00000021;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barraAlta img {
+    margin: auto;
+    margin-top: 5px;
+    width: 120px;
+    padding-left: 10px;
+}
+
+#logoPag {
+    margin: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+}
+
+.botonCarrito {
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #00000046;
+    background: linear-gradient(135deg, #c4e4ff, #b7d4ff, #aeafff, #dbaeff);
+    align-items: end;
+    z-index: 1000;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #6f71df;
+    font-size: 75px;
+    padding: 20px;
+    margin: 0;
+}
+
+#quienesSomos {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    background: #ffffff;
+    background: linear-gradient(0deg, #e0e2ffc2 0%, #f1e7f5 100%);
+    margin: 0;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px #0000000e;
+}
+
+.contenido {
+    justify-content: center;
+    margin: auto;
+    margin-top: 35px;
+    padding: 50px;
+}
+
+.productos {
+    display: flex;
+    gap: 20px;
+}
+
+.tarjetaCompra {
+    box-shadow: 0 0 15px #00000007;
+    background: #fff;
+    width: 400px;
+    height: 450px;
+    border-radius: 20px;
+}
+
+.tarjetaCompra button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 145px;
+    cursor: pointer;
+    border: none;
+    color: #ede7f7;
+    font-weight: bold;
+    font-size: 15px;
+    background: #6f71df;
+    background: linear-gradient(0deg, #b0b1fc 0%, #6f71df 100%);
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px #00000042;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: inline-block;
+}
+
+.tarjetaCompra button:active {
+    transform: scale(0.9);
+    transition: transform 0.1s;
+}
+
+.imgContent {
+    width: 65%;
+    height: 55%;
+    margin: auto;
+    margin-top: 5%;
+    background: #ddedfa65;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #6f71df;
+    font-size: 75px;
+    padding: 20px;
+    margin: 0;
+}
+
+img {
+    margin: 10px;
+    margin-top: 18%;
+    width: 240px;
+
+}
+
+h3,p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.producto, .item-carrito {
+    margin: 30px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.item-carrito button {
+    background: #2196f3;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.item-carrito button:hover {
+    background: #0b7dda;
+}
+
+.btn-eliminar {
+    background: red;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .barraNav {
+        width: 160px;
+        transform: translateX(-200px);
+    }
+
+    .boton-Barra {
+        top: 10px;
+        left: 15px;
+        font-size: 22px;
+        padding: 8px 12px;
+    }
+
+    .barraAlta {
+        height: 55px;
+    }
+
+    .barraAlta h4 {
+        font-size: 28px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    #logoPag {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    h4 {
+        font-size: 45px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .barraNav {
+        width: 140px;
+        transform: translateX(-180px);
+    }
+
+    .barraNav a {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .boton-Barra {
+        font-size: 20px;
+        padding: 7px 10px;
+    }
+
+    .barraAlta h4 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .compraUno, .compraDos, .compraTres {
+        width: 90%;     
+        max-width: 350px; 
+        height: auto;   
+        padding-bottom: 20px;
+    }
+
+    .compraUno img,
+    .compraDos img,
+    .compraTres img {
+        width: 60%;
+        margin-top: 25px;
+    }
+
+    .botonCompra {
+        margin-left: 0;
+        display: block;
+        margin: 10px auto; /* Centra el botón en móvil */
+    }
+}

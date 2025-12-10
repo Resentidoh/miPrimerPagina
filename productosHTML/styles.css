@@ -1,0 +1,453 @@
+body {
+    margin: 0;
+    background: #f7f8ff;
+    display: flex;
+}
+
+.boton-Barra {
+    position: fixed;
+    top: 5px;
+    left: 63px;
+    background-color: rgb(204, 236, 250);
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 25px;
+    padding: 10px 15px;
+    box-shadow: 0 0 10px #00000034;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.boton-Barra:active {
+    transform: scale(0.90);
+    transition: transform 0.1s;
+}
+
+.barraNav {
+    position: fixed;
+    left: 0;
+    background: #a3d6f1;
+    background: linear-gradient(90deg, #c4e6e6 0%, hsl(227, 67%, 88%) 100%);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 185px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: 0 0 15px #b8b8b8;
+    z-index: 999;
+    overflow: hidden;
+
+    transform: translateX(-260px);
+    transition: transform 0.4s ease;
+}
+
+.barraNav.open {
+    transform: translateX(0);
+}
+
+.barraNav h2 {
+    margin-top: 60px;
+    text-align: center;
+    text-shadow: 0 0 10px #00000052;
+    color: #0042f756;
+    font-weight: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #ffffff67;
+}
+
+.barraNav a{
+    display: block;
+    padding: 15px 20px;
+    font-size: 18px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.barraNav a:hover {
+    background-color: #b5bfeb;
+    transform: translate(20px, 0);
+}
+
+.barraAlta {
+    position: fixed;
+    background: #fff;
+    background: linear-gradient(0deg, #e0ecf1 0%, #bbd4ee 100%);
+    box-shadow: 0 0 10px #00000021;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barraAlta h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #00000042;
+}
+
+.barraAlta img {
+    margin: auto;
+    margin-top: 5px;
+    width: 120px;
+    padding-left: 10px;
+}
+
+.botonCarrito {
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #00000046;
+    background: linear-gradient(135deg, #c4e4ff, #b7d4ff, #aeafff, #dbaeff);
+    align-items: end;
+    z-index: 1000;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #6f71df;
+    font-size: 75px;
+    padding: 20px;
+    margin: 0;
+}
+
+.regresar {
+    z-index: 1000;
+    margin: 7px;
+    margin-left: 15px;
+    width: 30px;
+    height: 50px;
+    border: none;
+    background: #ccecfa;
+    box-shadow: 0 0 5px #0000003a;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    position: fixed;
+}
+
+.regresar:active {
+    transform: scale(0.90);
+    transition: transform 0.1s;
+}
+
+.contenido {
+    justify-content: center;
+    margin: auto;
+    margin-top: 55px;
+    padding: 40px;
+}
+
+.productoInf {
+    display: flex;
+    box-shadow: 0 0 15px #00000013;
+    background: #eff6ff;
+    width: 1250px;
+    height: 500px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.imagen {
+    margin: 0;
+    border-radius: 30px;
+    background: #00000021;
+    width: 600px;
+    height: 92%;
+    margin: 20px;
+}
+
+img {
+    margin: 20px;
+    margin-top: 110px;
+    width: 92%;
+    height: auto;
+}
+
+.nombreTeclado {
+    color: #000000;
+    font-size: 40px;
+}
+
+.info {
+    box-shadow: 0 0 15px #00000018;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: auto;
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 90%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+p {
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.precioTeclado {
+    color: #958ef7;
+    text-shadow: 0 0 5px #0000004f;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.stock {
+    font-size: 20px;
+    border-bottom: 2px solid #000;
+    
+}
+
+.botones {
+    margin-top: 20px;
+}
+
+.botonComprarA, .botonAddC {
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 10px #00000057;
+    cursor: pointer;
+}
+
+.botonComprarA {
+    margin-right: 20px;
+    background: linear-gradient(90deg, #8400ff, #e06767, #033dff, #033dff);
+    background-size: 300% 300%;
+    transition: background-position 0.5s ease, transform 0.4s;
+}
+
+.botonAddC {
+    background: linear-gradient(90deg, #c990ff, #e6b2b2, #15efff, #15efff);
+    background-size: 300% 300%;
+    transition: background-position 0.5s ease, transform 0.4s;
+}
+
+.botonComprarA:hover, .botonAddC:hover{
+    background-position: 100% 0;
+    transform: scale(1.15);
+}
+
+.productoCaract {
+    margin-top: 30px;
+    display: block;
+    box-shadow: 0 0 15px #00000013;
+    background: #eff6ff;
+    width: 1250px;
+    height: auto;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    pointer-events: none;
+    width: 280px;
+    border-radius: 100px;
+}
+
+.texto {
+    padding: 10px;
+    padding-bottom: 35px;
+}
+
+#textoCaract {
+    margin-left: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+}
+
+table {
+    margin: auto;
+    margin-right: 100px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #00000050;
+    box-shadow: 0 0 10px #0000000c;
+}
+
+th {
+    background: #d4d4d433;
+    box-shadow: 0 0 10px #c2c2c23a;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+td {
+    text-align: center;
+    background: #9696961f;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.recomendaciones {
+    background: #ffffff;
+    background: linear-gradient(180deg, #eff6ff 0%, #fefff5 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 15px #00000013;
+    height: 350px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+}
+
+.recom {
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.enlaceRecom {
+    text-decoration: none;
+    color: inherit;
+    display: block;       /* Hace que ocupe todo el ancho */
+}
+
+.productos-recom {
+    display: flex;
+    justify-content: center;
+}
+
+.targeta-1 {
+    width: 100%;
+    height: 100%;
+}
+
+.targeta-1 p {
+    width: auto;
+    text-align: center;
+}
+
+.precio-recom1 {
+    margin: 0;
+}
+
+.recomendacionUno {
+    margin: 10px;
+    background: #ffffff;
+    border: 1px solid #0000002f;
+    width: 250px;
+    height: 240px;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.recomendacionUno:hover {
+    box-shadow: 0 0 15px #00000031;
+    transform: scale(1.05,1.05);
+}
+
+.imagenRecom {
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    background: #f3f8ff;
+    width: 200px;
+    height: 130px;
+    overflow: hidden;
+    box-shadow: 0 0 5px #00000013;
+}
+
+.recomendacionUno img {
+    margin: 5px;
+    margin-top: 35px;
+    width: 190px;
+}
+
+.recomendacionUno a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .barraNav {
+        width: 160px;
+        transform: translateX(-200px);
+    }
+
+    .boton-Barra {
+        top: 10px;
+        left: 15px;
+        font-size: 22px;
+        padding: 8px 12px;
+    }
+
+    .barraAlta {
+        height: 55px;
+    }
+
+    .barraAlta h1 {
+        font-size: 28px;
+    }
+
+    #logoPag {
+        top: 100px;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    h1 {
+        font-size: 45px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .barraNav {
+        width: 140px;
+        transform: translateX(-180px);
+    }
+
+    .barraNav a {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .boton-Barra {
+        font-size: 20px;
+        padding: 7px 10px;
+    }
+
+    .barraAlta h1 {
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+}
